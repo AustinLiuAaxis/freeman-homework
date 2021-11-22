@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  homework-app:
+    build: ../../..
+    container_name: homework-app
+    environment:
+    ports:
+      - 8081:8081
