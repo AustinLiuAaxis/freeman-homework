@@ -2,7 +2,7 @@ import { Column, Entity, Index } from "typeorm";
 
 @Index("pet_pkey", ["id"], { unique: true })
 @Entity("pet", { schema: "public" })
-export class PetEntity {
+export class Pet {
   @Column("integer", { primary: true, name: "id" })
   id: number;
 
