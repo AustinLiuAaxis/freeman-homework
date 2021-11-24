@@ -27,11 +27,11 @@ function ormConfig(): TypeOrmModuleOptions {
         ormconfig = {
             name: 'default',
             type: 'postgres',
-            database: 'homework',
+            database: 'petstore2',
             host: 'localhost',
-            port: 5433,
-            username: 'sa',
-            password: 'yourStrong(!)Password',
+            port: 5432,
+            username: 'postgres',
+            password: 'postgres',
             logging: false,
             synchronize: commonConf.SYNCRONIZE,
             entities: commonConf.ENTITIES,
@@ -40,6 +40,25 @@ function ormConfig(): TypeOrmModuleOptions {
             migrationsRun: commonConf.MIGRATIONS_RUN,
         };
     }
+
+    if (process.env.BACKEND_ENV === 'dev') {
+      ormconfig = {
+        name: 'default',
+        type: 'postgres',
+        database: 'petstore2',
+        host: 'localhost',
+        port: 5432,
+        username: 'postgres',
+        password: 'postgres',
+        logging: false,
+        synchronize: commonConf.SYNCRONIZE,
+        entities: commonConf.ENTITIES,
+        migrations: commonConf.MIGRATIONS,
+        cli: commonConf.CLI,
+        migrationsRun: commonConf.MIGRATIONS_RUN,
+      };
+    }
+
 
     if (process.env.BACKEND_ENV === 'test') {
         ormconfig = {
