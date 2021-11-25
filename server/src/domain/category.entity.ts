@@ -2,7 +2,7 @@ import { Column, Entity, Index } from "typeorm";
 
 @Index("category_pkey", ["id"], { unique: true })
 @Entity("category", { schema: "public" })
-export class CategoryEntity {
+export class Category {
   @Column("integer", { primary: true, name: "id" })
   id: number;
 

@@ -11,11 +11,13 @@ import { AuthorityRepository } from '../repository/authority.repository';
 
 import { PublicUserController } from '../web/rest/public.user.controller';
 import { AccountController } from '../web/rest/account.controller';
+import {PetModule} from "../module//pet.module";
 
 @Module({
     imports: [
         TypeOrmModule.forFeature([AuthorityRepository]),
         UserModule,
+        PetModule,
         PassportModule,
         JwtModule.register({
             secret: config['jhipster.security.authentication.jwt.base64-secret'],

@@ -27,7 +27,7 @@ function ormConfig(): TypeOrmModuleOptions {
         ormconfig = {
             name: 'default',
             type: 'postgres',
-            database: 'petstore2',
+            database: 'petstore',
             host: 'localhost',
             port: 5432,
             username: 'postgres',
@@ -45,7 +45,7 @@ function ormConfig(): TypeOrmModuleOptions {
       ormconfig = {
         name: 'default',
         type: 'postgres',
-        database: 'petstore2',
+        database: 'petstore',
         host: 'localhost',
         port: 5432,
         username: 'postgres',

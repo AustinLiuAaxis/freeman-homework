@@ -18,6 +18,6 @@ export class Order {
   @Column("character varying", { name: "status", nullable: true, length: 255 })
   status: string | null;
 
-  @Column("inet", { name: "complete", nullable: true })
+  @Column("character varying", { name: "complete", length: 255 })
   complete: string | null;
 }

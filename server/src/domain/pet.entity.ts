@@ -1,4 +1,5 @@
 import { Column, Entity, Index } from "typeorm";
+import {options} from "tsconfig-paths/lib/options";
 
 @Index("pet_pkey", ["id"], { unique: true })
 @Entity("pet", { schema: "public" })
